@@ -56,7 +56,7 @@ export default function Register() {
             setError(err.response.data.Error);
             setModalShow(true);
         }
-    }
+    };
 
 
     return (
@@ -69,7 +69,7 @@ export default function Register() {
                             onHide={() => setModalShow(false)}
                             error={error} />
 
-                        <h5 className="card-title text-center">Register</h5>
+                        <h5 className="card-title text-center">Register </h5>
                         <form onSubmit={onSubmit} className="form-signin">
                             <div className="form-group">
                                 <label htmlFor="inputEmail">Username</label>

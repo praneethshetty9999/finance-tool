@@ -18,7 +18,7 @@ export default function Register() {
 
                 Axios({
                     method: 'get',
-                    url: 'http://localhost:5000/api/users/isAuthenticated',
+                    url: 'https://finance-tool.onrender.com/api/users/isAuthenticated',
                     headers: {
                         'Authorization': localStorage.getItem('jwt'),
                     }
@@ -47,7 +47,7 @@ export default function Register() {
                 confirmPassword
             }
 
-            await Axios.post("http://localhost:5000/api/users/register", registerUser);
+            await Axios.post("https://finance-tool.onrender.com/api/users/register", registerUser);
             window.location = '/login';
 
 

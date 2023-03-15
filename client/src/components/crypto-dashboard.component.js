@@ -31,7 +31,7 @@ export default function CryptoDashboard() {
 
                 Axios({
                     method: 'get',
-                    url: 'http://localhost:5000/api/users/isAuthenticated',
+                    url: 'https://finance-tool.onrender.com/api/users/isAuthenticated',
                     headers: {
                         'Authorization': localStorage.getItem('jwt'),
                     }
@@ -55,7 +55,7 @@ export default function CryptoDashboard() {
         try {
             await Axios({
                 method: 'post',
-                url: 'http://localhost:5000/api/protected/vantage-api/getHistory',
+                url: 'https://finance-tool.onrender.com/api/protected/vantage-api/getHistory',
                 headers: {
                     'Authorization': localStorage.getItem('jwt'),
                 },
@@ -103,7 +103,7 @@ export default function CryptoDashboard() {
         try {
             await Axios({
                 method: 'post',
-                url: 'http://localhost:5000/api/protected/vantage-api/getHistory',
+                url: 'https://finance-tool.onrender.com/api/protected/vantage-api/getHistory',
                 headers: {
                     'Authorization': localStorage.getItem('jwt'),
                 },
@@ -149,7 +149,7 @@ export default function CryptoDashboard() {
         try {
             await Axios({
                 method: 'post',
-                url: 'http://localhost:5000/api/protected/vantage-api/getHistory',
+                url: 'https://finance-tool.onrender.com/api/protected/vantage-api/getHistory',
                 headers: {
                     'Authorization': localStorage.getItem('jwt'),
                 },
@@ -214,7 +214,7 @@ export default function CryptoDashboard() {
         try {
             await Axios({
                 method: 'post',
-                url: 'http://localhost:5000/api/protected/vantage-api/getCryptoRating',
+                url: 'https://finance-tool.onrender.com/api/protected/vantage-api/getCryptoRating',
                 headers: {
                     'Authorization': localStorage.getItem('jwt'),
                 },
@@ -241,7 +241,7 @@ export default function CryptoDashboard() {
         try {
             await Axios({
                 method: 'post',
-                url: 'http://localhost:5000/api/protected/vantage-api/getExchangeRate',
+                url: 'https://finance-tool.onrender.com/api/protected/vantage-api/getExchangeRate',
                 headers: {
                     'Authorization': localStorage.getItem('jwt'),
                 },

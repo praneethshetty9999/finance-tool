@@ -28,7 +28,7 @@ export default function EditModal(props) {
             e.target.reset();
             await Axios({
                 method: 'put',
-                url: 'http://localhost:5000/api/protected/income/editTransaction/'+props.transaction._id,
+                url: 'https://finance-tool.onrender.com/api/protected/income/editTransaction/'+props.transaction._id,
                 headers: {
                     'Authorization': localStorage.getItem('jwt'),
                 },

@@ -14,7 +14,7 @@ export default function HomePage() {
 
                 Axios({
                     method: 'get',
-                    url: 'http://localhost:5000/api/users/isAuthenticated',
+                    url: 'https://finance-tool.onrender.com/api/users/isAuthenticated',
                     headers: {
                         'Authorization': localStorage.getItem('jwt'),
                     }

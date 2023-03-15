@@ -36,7 +36,7 @@ export default function ExpenseTracker() {
 
                 Axios({
                     method: 'get',
-                    url: 'http://localhost:5000/api/users/isAuthenticated',
+                    url: 'https://finance-tool.onrender.com/api/users/isAuthenticated',
                     headers: {
                         'Authorization': localStorage.getItem('jwt'),
                     }
@@ -60,7 +60,7 @@ export default function ExpenseTracker() {
         setEditModalShow(false);
         await Axios({
             method: 'get',
-            url: 'http://localhost:5000/api/protected/income//getHistory',
+            url: 'https://finance-tool.onrender.com/api/protected/income//getHistory',
             headers: {
                 'Authorization': localStorage.getItem('jwt'),
             },
@@ -129,7 +129,7 @@ export default function ExpenseTracker() {
 
             await Axios({
                 method: 'post',
-                url: 'http://localhost:5000/api/protected/income/addTransaction',
+                url: 'https://finance-tool.onrender.com/api/protected/income/addTransaction',
                 headers: {
                     'Authorization': localStorage.getItem('jwt'),
                 },
@@ -160,7 +160,7 @@ export default function ExpenseTracker() {
     const deletetransaction = async (id) => {
         await Axios({
           method: 'delete',
-          url: 'http://localhost:5000/api/protected/income/deleteTransaction/'+id,
+          url: 'https://finance-tool.onrender.com/api/protected/income/deleteTransaction/'+id,
           headers: {
             'Authorization': localStorage.getItem('jwt'),
           },

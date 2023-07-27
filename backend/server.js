@@ -10,9 +10,14 @@ const router = require('express').Router();
 const app=express();
 const port=process.env.PORT||5000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(bodyparser.json());
 app.use(passport.initialize());
+
 
 
 require('./config/passport')(passport);
@@ -33,6 +38,7 @@ app.use('/api/protected/vantage-api',passport.authenticate('jwt',{session:false}
 
 const incomeRouter=require('./routes/transaction.router');
 app.use('/api/protected/income',passport.authenticate('jwt',{session:false}),incomeRouter);
+
 
 
 app.listen(port,()=>{
